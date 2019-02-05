@@ -97,11 +97,14 @@ while activ:
 	second = thetime-int(thetime/60)*60
 	if thetime == 0:
 		activ2 = True
+		shell_sound.play()
 		while activ2:
+			shell_sound.play()
 			screen.fill([255,255,255])
 			screen.blit(font.render("Your Points: {0}".format(points),1,(0,255,0)),[330,230])
 			pygame.display.flip()
 			for event in pygame.event.get():
+				shell_sound.play()
 				if event.type == pygame.QUIT:
 					activ = False
 					activ2 = False
